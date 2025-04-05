@@ -53,7 +53,7 @@ git clone --depth=1 https://github.com/esirplayground/luci-app-poweroff package/
 # Themes
 #UPDATE_PACKAGE "argon" "sbwml/luci-theme-argon" "openwrt-24.10"
 
-
+git clone https://github.com/xiaorouji/openwrt-passwall2.git package/luci-app-passwall2
 
 #DDNS-go
 git clone https://github.com/sirpdboy/luci-app-ddns-go.git package/ddns-go
