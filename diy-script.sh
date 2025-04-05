@@ -80,10 +80,10 @@ UPDATE_PACKAGE "xray-core xray-plugin dns2tcp dns2socks haproxy hysteria \
         naiveproxy shadowsocks-rust v2ray-core v2ray-geodata v2ray-geoview v2ray-plugin \
         tuic-client chinadns-ng ipt2socks tcping trojan-plus simple-obfs shadowsocksr-libev \
         luci-app-passwall smartdns luci-app-smartdns v2dat mosdns luci-app-mosdns \
-        taskd luci-lib-xterm luci-lib-taskd \
+        taskd luci-lib-xterm luci-lib-taskd luci-app-passwall2 \
         luci-app-store quickstart luci-app-quickstart luci-app-istorex luci-app-cloudflarespeedtest \
         luci-theme-argon netdata luci-app-netdata lucky luci-app-lucky luci-app-openclash mihomo \
-        luci-app-nikki" "kenzok8/small-package" "main" "pkg"
+        luci-app-nikki nikki" "kenzok8/small-package" "main" "pkg"
 
 #speedtest
 UPDATE_PACKAGE "luci-app-netspeedtest" "https://github.com/sbwml/openwrt_pkgs.git" "main" "pkg"
@@ -92,6 +92,8 @@ UPDATE_PACKAGE "speedtest-cli" "https://github.com/sbwml/openwrt_pkgs.git" "main
 UPDATE_PACKAGE "luci-app-adguardhome" "https://github.com/ysuolmai/luci-app-adguardhome.git" "master"
 UPDATE_PACKAGE "luci-app-tailscale" "asvow/luci-app-tailscale" "main"
 
+UPDATE_PACKAGE "nikki" "nikkinikki-org/OpenWrt-nikki" "main"
+UPDATE_PACKAGE "passwall2" "xiaorouji/openwrt-passwall2" "main" "pkg"
 
 keywords_to_delete=(
     "xiaomi_ax3600" "xiaomi_ax9000" "xiaomi_ax1800" "glinet" "jdcloud_ax6600"
@@ -113,38 +115,37 @@ done
 provided_config_lines=(
     "CONFIG_PACKAGE_luci-app-zerotier=y"
     "CONFIG_PACKAGE_luci-i18n-zerotier-zh-cn=y"
-    "CONFIG_PACKAGE_luci-app-adguardhome=y"
-    "CONFIG_PACKAGE_luci-i18n-adguardhome-zh-cn=y"
+    "CONFIG_PACKAGE_luci-app-passwall=y"
+    "CONFIG_PACKAGE_luci-app-passwall_INCLUDE_Shadowsocks_Libev_Client=n"
+    "CONFIG_PACKAGE_luci-app-passwall_INCLUDE_Shadowsocks_Libev_Server=n"
+    "CONFIG_PACKAGE_luci-app-passwall_INCLUDE_Shadowsocks_Rust_Client=n"
+    "CONFIG_PACKAGE_luci-app-passwall_INCLUDE_ShadowsocksR_Libev_Client=n"
+    "CONFIG_PACKAGE_luci-app-passwall_INCLUDE_Simple_Obfs=n"
+    "CONFIG_PACKAGE_luci-app-passwall_INCLUDE_SingBox=n"
+    "CONFIG_PACKAGE_luci-app-passwall_INCLUDE_Trojan_Plus=n"
+    "CONFIG_PACKAGE_luci-app-passwall_INCLUDE_V2ray_Plugin=n"
     "CONFIG_PACKAGE_luci-app-poweroff=y"
     "CONFIG_PACKAGE_luci-i18n-poweroff-zh-cn=y"
-    "CONFIG_PACKAGE_cpufreq=y"
-    "CONFIG_PACKAGE_luci-app-cpufreq=y"
-    "CONFIG_PACKAGE_luci-i18n-cpufreq-zh-cn=y"
+
     "CONFIG_PACKAGE_luci-app-ttyd=y"
     "CONFIG_PACKAGE_luci-i18n-ttyd-zh-cn=y"
     "CONFIG_PACKAGE_ttyd=y"
     "CONFIG_PACKAGE_luci-app-homeproxy=y"
     "CONFIG_PACKAGE_luci-i18n-homeproxy-zh-cn=y"
-    "CONFIG_PACKAGE_luci-app-ddns-go=y"
-    "CONFIG_PACKAGE_luci-i18n-ddns-go-zh-cn=y"
+
     "CONFIG_PACKAGE_luci-app-argon-config=y"
     "CONFIG_PACKAGE_nano=y"
     "CONFIG_BUSYBOX_CONFIG_LSUSB=n"
-    "CONFIG_PACKAGE_luci-app-netspeedtest=y"
+
     "CONFIG_PACKAGE_luci-app-vlmcsd=y"
     "CONFIG_COREMARK_OPTIMIZE_O3=y"
     "CONFIG_COREMARK_ENABLE_MULTITHREADING=y"
     "CONFIG_COREMARK_NUMBER_OF_THREADS=6"
-    #"CONFIG_PACKAGE_luci-theme-design=y"
-    "CONFIG_PACKAGE_luci-app-filetransfer=y"
-    "CONFIG_PACKAGE_openssh-sftp-server=y"
-    "CONFIG_PACKAGE_luci-app-frpc=m" 
+
     "CONFIG_OPKG_USE_CURL=y"
     "CONFIG_PACKAGE_opkg=y"   
     "CONFIG_USE_APK=n"
-    "CONFIG_PACKAGE_luci-app-tailscale=y"
-    #"CONFIG_PACKAGE_luci-app-msd_lite=y"
-    #"CONFIG_PACKAGE_luci-app-lucky=y"
+
     "CONFIG_PACKAGE_luci-app-gecoosac=y"
 )
 
@@ -206,6 +207,22 @@ rm package/kernel/mac80211/patches/nss/subsys/{999-775-wifi-mac80211-Changes-for
     "CONFIG_PACKAGE_luci-i18n-dockerman-zh-cn=y"
     "CONFIG_PACKAGE_luci-app-alist=y"
     "CONFIG_PACKAGE_luci-i18n-alist-zh-cn=y"
+    "CONFIG_PACKAGE_cpufreq=y"
+    "CONFIG_PACKAGE_luci-app-cpufreq=y"
+    "CONFIG_PACKAGE_luci-i18n-cpufreq-zh-cn=y"    
+    "CONFIG_PACKAGE_luci-app-ddns-go=y"
+    "CONFIG_PACKAGE_luci-i18n-ddns-go-zh-cn=y"
+    #"CONFIG_PACKAGE_luci-theme-design=y"
+    "CONFIG_PACKAGE_luci-app-filetransfer=y"
+    "CONFIG_PACKAGE_openssh-sftp-server=y"
+    "CONFIG_PACKAGE_luci-app-frpc=m" 
+    "CONFIG_PACKAGE_luci-app-tailscale=y"
+    #"CONFIG_PACKAGE_luci-app-msd_lite=y"
+    #"CONFIG_PACKAGE_luci-app-lucky=y"
+    "CONFIG_PACKAGE_luci-app-netspeedtest=y"   
+    "CONFIG_PACKAGE_luci-app-adguardhome=y"
+    "CONFIG_PACKAGE_luci-i18n-adguardhome-zh-cn=y"   
+    "CONFIG_PACKAGE_luci-app-frps=y"      
     "CONFIG_PACKAGE_fdisk=y"
     "CONFIG_PACKAGE_parted=y"
     "CONFIG_PACKAGE_iptables-mod-extra=y"
@@ -213,16 +230,7 @@ rm package/kernel/mac80211/patches/nss/subsys/{999-775-wifi-mac80211-Changes-for
     "CONFIG_PACKAGE_ip6tables-mod-fullconenat=y"
     "CONFIG_PACKAGE_iptables-mod-fullconenat=y"
     "CONFIG_PACKAGE_libip4tc=y"
-    "CONFIG_PACKAGE_libip6tc=y"
-    "CONFIG_PACKAGE_luci-app-passwall=y"
-    "CONFIG_PACKAGE_luci-app-passwall_INCLUDE_Shadowsocks_Libev_Client=n"
-    "CONFIG_PACKAGE_luci-app-passwall_INCLUDE_Shadowsocks_Libev_Server=n"
-    "CONFIG_PACKAGE_luci-app-passwall_INCLUDE_Shadowsocks_Rust_Client=n"
-    "CONFIG_PACKAGE_luci-app-passwall_INCLUDE_ShadowsocksR_Libev_Client=n"
-    "CONFIG_PACKAGE_luci-app-passwall_INCLUDE_Simple_Obfs=n"
-    "CONFIG_PACKAGE_luci-app-passwall_INCLUDE_SingBox=n"
-    "CONFIG_PACKAGE_luci-app-passwall_INCLUDE_Trojan_Plus=n"
-    "CONFIG_PACKAGE_luci-app-passwall_INCLUDE_V2ray_Plugin=n"
+    "CONFIG_PACKAGE_libip6tc=y" 
     "CONFIG_PACKAGE_htop=y"
     "CONFIG_PACKAGE_fuse-utils=y"
     "CONFIG_PACKAGE_tcpdump=y"
@@ -248,7 +256,7 @@ rm package/kernel/mac80211/patches/nss/subsys/{999-775-wifi-mac80211-Changes-for
     "CONFIG_PACKAGE_kmod-dummy=y"
     "CONFIG_PACKAGE_kmod-veth=y"
     "CONFIG_PACKAGE_automount=y"
-    "CONFIG_PACKAGE_luci-app-frps=y"    
+  
 )
 
 [[ $FIRMWARE_TAG == "IPQ"* ]] && provided_config_lines+=("CONFIG_PACKAGE_sqm-scripts-nss=y")
