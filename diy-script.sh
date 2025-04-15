@@ -61,6 +61,11 @@ git clone https://github.com/sirpdboy/luci-app-ddns-go.git package/ddns-go
 #luci-app-zerotier
 git clone https://github.com/rufengsuixing/luci-app-zerotier.git package/luci-app-zerotier
 
+# 科学上网插件
+git clone --depth=1 https://github.com/xiaorouji/openwrt-passwall-packages package/openwrt-passwall
+git clone --depth=1 https://github.com/xiaorouji/openwrt-passwall package/luci-app-passwall
+git clone --depth=1 https://github.com/xiaorouji/openwrt-passwall2 package/luci-app-passwall2
+git clone --depth=1 https://github.com/nikkinikki-org/OpenWrt-nikki package/luci-app-nikki
 
 #tailscale
 #sed -i '/\/etc\/init\.d\/tailscale/d;/\/etc\/config\/tailscale/d;' feeds/packages/net/tailscale/Makefile
