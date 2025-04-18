@@ -81,17 +81,17 @@ git clone https://github.com/lwb1978/openwrt-gecoosac package/openwrt-gecoosac
 UPDATE_PACKAGE "alist" "https://github.com/sbwml/luci-app-alist.git" "main"
 
 #small-package
-UPDATE_PACKAGE "xray-core xray-plugin dns2tcp dns2socks haproxy hysteria \
+UPDATE_PACKAGE "xray-core xray-plugin dns2tcp dns2socks haproxy hysteria  \
         naiveproxy shadowsocks-rust v2ray-core v2ray-geodata v2ray-geoview v2ray-plugin \
         tuic-client chinadns-ng ipt2socks tcping trojan-plus simple-obfs shadowsocksr-libev \
         luci-app-passwall smartdns luci-app-smartdns v2dat mosdns luci-app-mosdns \
-        taskd luci-lib-xterm luci-lib-taskd luci-app-passwall2 luci-app-poweroff \
-        luci-app-store quickstart luci-app-quickstart luci-app-istorex luci-app-cloudflarespeedtest \
+        taskd luci-lib-xterm luci-lib-taskd luci-app-passwall2 luci-app-poweroff  \
+        luci-app-upnp luci-app-arpbind luci-app-uhttpd \
         luci-theme-argon netdata luci-app-netdata lucky luci-app-lucky luci-app-openclash mihomo \
         luci-app-nikki luci-app-ramfree" "kenzok8/small-package" "main" "pkg"
 
 #speedtest
-UPDATE_PACKAGE "luci-app-netspeedtest" "https://github.com/sbwml/openwrt_pkgs.git" "main" "pkg"
+#UPDATE_PACKAGE "luci-app-netspeedtest" "https://github.com/sbwml/openwrt_pkgs.git" "main" "pkg"
 UPDATE_PACKAGE "speedtest-cli" "https://github.com/sbwml/openwrt_pkgs.git" "main" "pkg"
 
 UPDATE_PACKAGE "luci-app-adguardhome" "https://github.com/ysuolmai/luci-app-adguardhome.git" "master"
