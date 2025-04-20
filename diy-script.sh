@@ -113,6 +113,7 @@ done
 provided_config_lines=(
     "CONFIG_PACKAGE_luci-app-zerotier=y"
     "CONFIG_PACKAGE_luci-i18n-zerotier-zh-cn=y"
+    "CONFIG_PACKAGE_luci-app-ramfree=y"
     "CONFIG_PACKAGE_luci-app-poweroff=y"
     "CONFIG_PACKAGE_luci-i18n-poweroff-zh-cn=y"
     "CONFIG_PACKAGE_cpufreq=y"
