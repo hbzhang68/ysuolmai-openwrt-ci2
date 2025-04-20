@@ -76,7 +76,7 @@ git clone https://github.com/lwb1978/openwrt-gecoosac package/openwrt-gecoosac
 UPDATE_PACKAGE "alist" "https://github.com/sbwml/luci-app-alist.git" "main"
 
 #small-package
-UPDATE_PACKAGE "xray-core xray-plugin dns2tcp dns2socks haproxy hysteria nikki \
+UPDATE_PACKAGE "xray-core xray-plugin dns2tcp dns2socks haproxy hysteria nikki sing-box \
         naiveproxy shadowsocks-rust v2ray-core v2ray-geodata v2ray-geoview v2ray-plugin \
         tuic-client chinadns-ng ipt2socks tcping trojan-plus simple-obfs shadowsocksr-libev \
         luci-app-passwall smartdns luci-app-smartdns v2dat mosdns luci-app-mosdns \
