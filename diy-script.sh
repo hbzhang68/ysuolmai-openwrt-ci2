@@ -45,7 +45,7 @@ UPDATE_PACKAGE() {
 
 
 # 添加额外插件
-git clone --depth=1 https://github.com/esirplayground/luci-app-poweroff package/luci-app-poweroff
+#git clone --depth=1 https://github.com/esirplayground/luci-app-poweroff package/luci-app-poweroff
 
 # 科学上网插件
 #UPDATE_PACKAGE "homeproxy" "https://github.com/VIKINGYFY/homeproxy.git" "main"
@@ -80,7 +80,7 @@ UPDATE_PACKAGE "xray-core xray-plugin dns2tcp dns2socks haproxy hysteria nikki s
         naiveproxy shadowsocks-rust v2ray-core v2ray-geodata v2ray-geoview v2ray-plugin \
         tuic-client chinadns-ng ipt2socks tcping trojan-plus simple-obfs shadowsocksr-libev \
         luci-app-passwall smartdns luci-app-smartdns v2dat mosdns luci-app-mosdns \
-        taskd luci-lib-xterm luci-lib-taskd luci-app-ssr-plus luci-app-passwall2 \
+        taskd luci-lib-xterm luci-lib-taskd luci-app-ssr-plus luci-app-passwall2 luci-app-poweroff \
         luci-app-store quickstart luci-app-quickstart luci-app-istorex luci-app-cloudflarespeedtest \
         luci-theme-argon netdata luci-app-netdata lucky luci-app-lucky luci-app-openclash mihomo \
         luci-app-nikki luci-app-ramfree" "kenzok8/small-package" "main" "pkg"
@@ -92,6 +92,8 @@ UPDATE_PACKAGE "speedtest-cli" "https://github.com/sbwml/openwrt_pkgs.git" "main
 UPDATE_PACKAGE "luci-app-adguardhome" "https://github.com/ysuolmai/luci-app-adguardhome.git" "master"
 UPDATE_PACKAGE "luci-app-tailscale" "asvow/luci-app-tailscale" "main"
 
+UPDATE_PACKAGE "vnt" "lmq8267/luci-app-vnt" "main"
+UPDATE_PACKAGE "luci-app-pushbot" "zzsj0928/luci-app-pushbot" "master"
 
 keywords_to_delete=(
     "xiaomi_ax3600" "xiaomi_ax9000" "xiaomi_ax1800" "glinet" "jdcloud_ax6600"
@@ -114,6 +116,7 @@ provided_config_lines=(
     "CONFIG_PACKAGE_luci-app-zerotier=y"
     "CONFIG_PACKAGE_luci-i18n-zerotier-zh-cn=y"
     "CONFIG_PACKAGE_luci-app-ramfree=y"
+    #"CONFIG_PACKAGE_luci-app-uhttpd=y"
     "CONFIG_PACKAGE_luci-app-poweroff=y"
     "CONFIG_PACKAGE_luci-i18n-poweroff-zh-cn=y"
     "CONFIG_PACKAGE_cpufreq=y"
