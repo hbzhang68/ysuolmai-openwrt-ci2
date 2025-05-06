@@ -79,11 +79,13 @@ UPDATE_PACKAGE "alist" "https://github.com/sbwml/luci-app-alist.git" "main"
 UPDATE_PACKAGE "xray-core xray-plugin dns2tcp dns2socks haproxy hysteria nikki sing-box \
         naiveproxy shadowsocks-rust v2ray-core v2ray-geodata v2ray-geoview v2ray-plugin \
         tuic-client chinadns-ng ipt2socks tcping trojan-plus simple-obfs shadowsocksr-libev \
-        luci-app-passwall smartdns luci-app-smartdns v2dat mosdns luci-app-mosdns \
+        luci-app-passwall smartdns luci-app-smartdns v2dat mosdns luci-app-mosdns luci-app-arpbind \
         taskd luci-lib-xterm luci-lib-taskd luci-app-ssr-plus luci-app-passwall2 luci-app-poweroff \
         luci-app-store quickstart luci-app-quickstart luci-app-istorex luci-app-cloudflarespeedtest \
         luci-theme-argon netdata luci-app-netdata lucky luci-app-lucky luci-app-openclash mihomo \
         luci-app-nikki luci-app-ramfree" "kenzok8/small-package" "main" "pkg"
+
+UPDATE_PACKAGE "luci-app-pushbot" "zzsj0928/luci-app-pushbot" "master"
 
 #speedtest
 UPDATE_PACKAGE "luci-app-netspeedtest" "https://github.com/sbwml/openwrt_pkgs.git" "main" "pkg"
