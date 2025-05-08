@@ -140,8 +140,7 @@ provided_config_lines=(
     "CONFIG_PACKAGE_luci-app-nikki=y"
     "CONFIG_PACKAGE_luci-i18n-nikki-zh-cn=y"
     "CONFIG_PACKAGE_luci-app-argon-config=y"
-    "CONFIG_PACKAGE_luci-app-msd_lite=y"
-    "CONFIG_PACKAGE_luci-app-lucky=y" 
+    "CONFIG_PACKAGE_luci-app-msd_lite=y"  
     "CONFIG_PACKAGE_luci-app-passwall=y"
     "CONFIG_PACKAGE_luci-app-passwall2=y"
     "CONFIG_PACKAGE_luci-app-passwall_INCLUDE_Shadowsocks_Libev_Client=n"
@@ -154,7 +153,6 @@ provided_config_lines=(
     "CONFIG_PACKAGE_luci-app-passwall_INCLUDE_V2ray_Plugin=n" 
     "CONFIG_PACKAGE_nano=y"
     "CONFIG_BUSYBOX_CONFIG_LSUSB=n"
-
     "CONFIG_PACKAGE_luci-app-vlmcsd=y"
     "CONFIG_COREMARK_OPTIMIZE_O3=y"
     "CONFIG_COREMARK_ENABLE_MULTITHREADING=y"
@@ -233,7 +231,7 @@ rm package/kernel/mac80211/patches/nss/subsys/{999-775-wifi-mac80211-Changes-for
     "CONFIG_PACKAGE_luci-i18n-adguardhome-zh-cn=y"
     "CONFIG_PACKAGE_luci-app-netspeedtest=y" 
     "CONFIG_PACKAGE_luci-app-tailscale=y"
-   
+    "CONFIG_PACKAGE_luci-app-lucky=y" 
     "CONFIG_PACKAGE_luci-app-ddns-go=y"
     "CONFIG_PACKAGE_luci-i18n-ddns-go-zh-cn=y"
     "CONFIG_PACKAGE_luci-app-filetransfer=y"    
