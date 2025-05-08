@@ -157,6 +157,7 @@ provided_config_lines=(
     "CONFIG_BUSYBOX_CONFIG_LSUSB=n"
     "CONFIG_PACKAGE_luci-app-vlmcsd=y"
     "CONFIG_PACKAGE_luci-app-arpbind=y"
+    "CONFIG_PACKAGE_luci-i18n-arpbind-zh-cn=y"
     "CONFIG_COREMARK_OPTIMIZE_O3=y"
     "CONFIG_COREMARK_ENABLE_MULTITHREADING=y"
     "CONFIG_COREMARK_NUMBER_OF_THREADS=6"
