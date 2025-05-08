@@ -87,7 +87,7 @@ UPDATE_PACKAGE "xray-core xray-plugin dns2tcp dns2socks haproxy hysteria nikki s
 
 UPDATE_PACKAGE "luci-app-pushbot" "zzsj0928/luci-app-pushbot" "master"
 #UPDATE_PACKAGE "luci-app-arpbind" "monokoo/luci-app-arpbind" "master"
-UPDATE_PACKAGE "luci-app-arpbind" "shangjiyu/openwrt-extra/tree/master/luci/applications/luci-app-arpbind" "master"
+UPDATE_PACKAGE "luci-app-arpbind" "shangjiyu/openwrt-extra/luci/applications/luci-app-arpbind" "master"
 
 #speedtest
 UPDATE_PACKAGE "luci-app-netspeedtest" "https://github.com/sbwml/openwrt_pkgs.git" "main" "pkg"
