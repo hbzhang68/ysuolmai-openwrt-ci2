@@ -273,8 +273,7 @@ rm package/kernel/mac80211/patches/nss/subsys/{999-775-wifi-mac80211-Changes-for
     "CONFIG_PACKAGE_kmod-veth=y"
     "CONFIG_PACKAGE_automount=y"
     "CONFIG_PACKAGE_luci-app-frps=y"
-    "CONFIG_PACKAGE_luci-app-ssr-plus=y"
-    "CONFIG_PACKAGE_luci-app-passwall2=y"
+
 )
 
 [[ $FIRMWARE_TAG == "IPQ"* ]] && provided_config_lines+=("CONFIG_PACKAGE_sqm-scripts-nss=y")
