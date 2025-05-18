@@ -164,7 +164,9 @@ provided_config_lines=(
     "CONFIG_OPKG_USE_CURL=y"
     "CONFIG_PACKAGE_opkg=y"   
     "CONFIG_USE_APK=n"
-   
+    "CONFIG_PACKAGE_luci-app-msd_lite=y" 
+    "CONFIG_PACKAGE_luci-app-pushbot=y"
+    "CONFIG_PACKAGE_luci-app-arpbind=y"
     "CONFIG_PACKAGE_luci-app-gecoosac=y"
 )
 
@@ -232,7 +234,7 @@ rm package/kernel/mac80211/patches/nss/subsys/{999-775-wifi-mac80211-Changes-for
     "CONFIG_PACKAGE_luci-app-netspeedtest=y" 
     "CONFIG_PACKAGE_luci-app-tailscale=y"
     "CONFIG_PACKAGE_luci-app-lucky=y" 
-    "CONFIG_PACKAGE_luci-app-msd_lite=y"  
+    
     "CONFIG_PACKAGE_luci-app-ddns-go=y"
     "CONFIG_PACKAGE_luci-i18n-ddns-go-zh-cn=y"
     "CONFIG_PACKAGE_luci-app-filetransfer=y"    
